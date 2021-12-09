@@ -114,6 +114,7 @@ void PageMenu()
 //Record for 20 sec data
 void PageRecord()
 {
+  lcd.PageCountDown(3);
   lcd.PageRecord();
   record();
   exportData();

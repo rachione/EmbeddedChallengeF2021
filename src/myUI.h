@@ -16,6 +16,7 @@ public:
     void PageMenu();
     void PageRecord();
     void PageResult();
+    void PageCountDown(int sec);
     void DisplayVel(float *vel);
     void Display(const char *str);
 };

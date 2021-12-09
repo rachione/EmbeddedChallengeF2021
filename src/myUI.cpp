@@ -33,6 +33,26 @@ void LCDUI::PageResult()
     lineCount = 0;
 }
 
+
+/**
+* @brief  Countdown for some seconds
+* @param  sec: second.
+* @retval None
+*/
+void LCDUI::PageCountDown(int sec)
+{
+    
+    char str[32];
+    for(int i=sec;i>=1;i--){
+        sprintf(str, "Countdown %d!", i);
+        lcd.Clear(LCD_COLOR_BLACK);
+        lineCount = 0;
+        Display(str);
+        wait_us(1000 * 1000);
+    }
+    
+}
+
 /**
 * @brief  Display Velocity on the LCD line by line.
 * @param  str: Velocity.
