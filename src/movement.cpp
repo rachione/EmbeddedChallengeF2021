@@ -37,7 +37,6 @@ float *Movement::GetVel(float *angVel)
     return vel;
 }
 
-
 /**
 * @brief  Get distance from 3 axes. One single leg is oscillating while walking, so the negative value will be positive.
 * @param  vel: Forward velocity.
@@ -45,5 +44,5 @@ float *Movement::GetVel(float *angVel)
 */
 float Movement::GetDistance(float *vel)
 {
-    return 0.2f;
+    return sqrt(vel[0] * vel[0] + vel[1] * vel[1] + vel[2] * vel[2]);
 }
