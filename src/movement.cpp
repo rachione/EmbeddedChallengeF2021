@@ -11,13 +11,13 @@ Movement::Movement(float _radius)
 */
 float *Movement::GetAngVel()
 {
-    //Gets (raw * sensitivity) = raw*0.875(I3G4250D_FULLSCALE_245)
+    //Gets raw data
     gyro.GetXYZ(vel);
 
     for (int i = 0; i < AXIS; i++)
     {
-        //mdps 250, 0.00875 * raw
-        vel[i] = vel[i] * 0.001;
+        //raw* Full Scale (+-)250 / 2^16
+        vel[i] = vel[i] *500/ 65536.0f;
     }
     return vel;
 }

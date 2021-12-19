@@ -373,10 +373,10 @@ void I3G4250D_ReadXYZAngRate(float *pfData)
       sensitivity = I3G4250D_SENSITIVITY_2000DPS;
       break;
   }
-  /* Multiplied by sensitivity */
+  /* Not Multiplied by sensitivity */
   for (i = 0; i < 3; i++)
   {
-    pfData[i] = (float)(RawData[i] * sensitivity);
+    pfData[i] = (float)(RawData[i]);
   }
 }
 
