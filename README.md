@@ -8,4 +8,4 @@ Built a wearable speedometer which can calculate velocity by measuring angular v
 For data storage, I choose to store data in the flash memory (sectors 5-6) using the TDBStore class, which is the Key-Value storage over a block device. So that the device can store and extract data easily. 
 
 For power supply, I have connected VCC and GND pin to the 9V battery with a 5V Linear Voltage Regulator (L7805CV).
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/1.jpg?raw=true)
+![alt text](https://github.com/rachione/EmbeddedChallengeF2021/blob/[branch]/1.jpg?raw=true)
